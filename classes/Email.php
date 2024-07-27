@@ -36,7 +36,7 @@ class Email {
               $mail->Port       = $_ENV['EMAIL_PORT'];     
 
               // CONFIGURAR CONTENIDO DEL EMAIL
-              $mail->setFrom('angeltobar015@gmail.com', 'Mailer');
+              $mail->setFrom($_ENV['EMAIL_FROM'], 'Mailer');
               $mail->addAddress($this->email, 'Bienes Raices');
           
               //Habilitar HTML
@@ -80,7 +80,7 @@ class Email {
               $mail->Port       = $_ENV['EMAIL_PORT'];       
 
               // CONFIGURAR CONTENIDO DEL EMAIL
-              $mail->setFrom('angeltobar015@gmail.com', 'Mailer');
+              $mail->setFrom($_ENV['EMAIL_FROM'], 'Mailer');
               $mail->addAddress($this->email, 'Bienes Raices');
           
               //Habilitar HTML
