@@ -3,6 +3,7 @@
 namespace Classes;
 
 use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 class Email {
@@ -36,7 +37,7 @@ class Email {
 
               // CONFIGURAR CONTENIDO DEL EMAIL
               $mail->setFrom('cuentas@appsalon.com', 'Mailer');
-              $mail->addAddress('cuentas@appsalon.com', 'Bienes Raices');
+              $mail->addAddress($this->email, 'Bienes Raices');
           
               //Habilitar HTML
               $mail->isHTML(true);                           
@@ -80,7 +81,7 @@ class Email {
 
               // CONFIGURAR CONTENIDO DEL EMAIL
               $mail->setFrom('cuentas@appsalon.com', 'Mailer');
-              $mail->addAddress('cuentas@appsalon.com', 'Bienes Raices');
+              $mail->addAddress($this->email, 'Bienes Raices');
           
               //Habilitar HTML
               $mail->isHTML(true);                           
