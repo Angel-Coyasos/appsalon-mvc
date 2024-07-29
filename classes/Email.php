@@ -32,7 +32,7 @@ class Email {
               $mail->SMTPAuth   = true;     
               $mail->Username   = $_ENV['EMAIL_USER']; 
               $mail->Password   = $_ENV['EMAIL_PASS'];  
-              $mail->SMTPSecure =  PHPMailer::ENCRYPTION_STARTTLS;
+              $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
               $mail->Port       = $_ENV['EMAIL_PORT'];     
 
               // CONFIGURAR CONTENIDO DEL EMAIL
@@ -76,7 +76,7 @@ class Email {
               $mail->SMTPAuth   = true;     
               $mail->Username   = $_ENV['EMAIL_USER']; 
               $mail->Password   = $_ENV['EMAIL_PASS'];  
-              $mail->SMTPSecure =  'tls';
+              $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
               $mail->Port       = $_ENV['EMAIL_PORT'];       
 
               // CONFIGURAR CONTENIDO DEL EMAIL
